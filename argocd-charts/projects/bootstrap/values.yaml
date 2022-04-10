@@ -4,9 +4,9 @@ applications:
   - microservices:
       - name: httpbin2
       - name: istio-base
-        namespace: istio-system
-      - name: istiod
-        namespace: istio-system
+      #   namespace: istio-system
+      # - name: istiod
+      #   namespace: istio-system
       # - name: argocd-ingress
       # - name: cert-manager
       #   namespace: cert-manager
