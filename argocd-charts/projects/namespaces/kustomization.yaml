@@ -8,3 +8,4 @@ resources:
   # - cert-manager.yaml
   - default.yaml
   - istio-system.yaml
+  - tiktok-namespace.yaml
