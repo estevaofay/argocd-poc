@@ -3,7 +3,9 @@ targetRevision: dev # overriden by kustomize
 applications:
   - microservices:
       - name: httpbin2
-      - name: istio-base
+      # - name: istio-base
+      # - name: adcap_broker
+        # namespace: default
       #   namespace: istio-system
       # - name: istiod
       #   namespace: istio-system
