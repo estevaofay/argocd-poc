@@ -4,7 +4,7 @@ applications:
   - microservices:
       - name: httpbin2
       # - name: istio-base
-      - name: adcap_broker
+      - name: sample-broker
         namespace: default
       #   namespace: istio-system
       # - name: istiod
