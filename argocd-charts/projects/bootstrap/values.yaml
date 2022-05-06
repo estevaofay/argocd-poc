@@ -1,0 +1,12 @@
+targetRevision: master # overriden by kustomize
+
+applications:
+  - microservices:
+      # - name: cert-manager
+      #   namespace: cert-manager
+      #   precedence: 1
+      # - name: ingress
+      # - name: httpbin
+      # - name: brewery-bees
+      # - name: argocd
+      #   namespace: argocd

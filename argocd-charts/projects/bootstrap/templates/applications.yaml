@@ -1,0 +1,43 @@
+{{- range $app := .Values.applications }}
+{{- range $microservice := $app.microservices }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ $microservice.name }}
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: {{ ($microservice.precedence | quote) | default ("5" | quote) }}    
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  # ignoreDifferences:
+  #   - group: apiextensions.k8s.io
+  #     kind: CustomResourceDefinition
+  #     jsonPointers:
+  #       - /status    
+  #   - group: admissionregistration.k8s.io
+  #     kind: ValidatingWebhookConfiguration
+  #     name: cert-manager-webhook
+  #     jsonPointers:
+  #       - /webhooks/0/namespaceSelector/matchExpressions/2
+  source:
+    repoURL: https://github.com/estevaofay/argocd-poc/argocd-charts
+    targetRevision: {{ $.Values.targetRevision }}
+    path: charts/{{ $microservice.name }}
+    # helm:
+    #   parameters:
+    #     - name: "instanceName"
+    #       value: {{ $.Values.instanceName }}
+    #     - name: "ingress-nginx.controller.service.annotations.service\\.beta\\.kubernetes\\.io/azure-dns-label-name"
+    #       value: {{ $.Values.instanceName }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: {{ ($microservice.namespace | default $app.namespace) | default "default" }}
+  syncPolicy:
+    automated:
+      prune: {{ $microservice.prune | default true }}
+      selfHeal: {{ $microservice.selfHeal | default true }}
+{{- end }}
+{{- end }}
