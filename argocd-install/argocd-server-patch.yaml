@@ -1,0 +1,10 @@
+- op: replace
+  path: /spec/template/spec/containers/0/command
+  value: 
+    - argocd-server
+    - --staticassets
+    - /shared/app
+    - --basehref
+    - /argocd
+    - --rootpath
+    - /argocd
