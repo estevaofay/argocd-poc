@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/estevaofay/argocd-poc.git
     targetRevision: dev
-    path: argocd-charts/bootstrap
+    path: argocd-charts/projects/bootstrap
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
