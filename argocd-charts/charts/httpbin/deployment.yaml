@@ -3,7 +3,13 @@ kind: Deployment
 metadata:
   name: httpbin
 spec:
-  spec:
-    containers:
-    - name: httpbin
-      image: httpbin
+  replicas: 1
+  selector:
+    matchLabels:
+      deploy: httpbin
+  template:
+    metadata:
+    spec:
+      containers:
+      - name: httpbin
+        image: httpbin
