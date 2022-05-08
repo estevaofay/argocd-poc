@@ -3,6 +3,7 @@ targetRevision: dev # overriden by kustomize
 applications:
   - microservices:
       - name: httpbin2
+      - name: argocd-ingress
       # - name: cert-manager
       #   namespace: cert-manager
       #   precedence: 1
