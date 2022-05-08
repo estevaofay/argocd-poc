@@ -7,3 +7,4 @@ generatorOptions:
 resources:
   # - cert-manager.yaml
   - default.yaml
+  - istio-system.yaml
