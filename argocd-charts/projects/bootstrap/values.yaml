@@ -3,6 +3,8 @@ targetRevision: dev # overriden by kustomize
 applications:
   - microservices:
       - name: httpbin2
+      - name: istio-base
+        namespace: istio-system
       # - name: argocd-ingress
       # - name: cert-manager
       #   namespace: cert-manager
