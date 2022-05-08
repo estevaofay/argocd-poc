@@ -23,9 +23,9 @@ spec:
   #     jsonPointers:
   #       - /webhooks/0/namespaceSelector/matchExpressions/2
   source:
-    repoURL: https://github.com/estevaofay/argocd-poc/argocd-charts
+    repoURL: https://github.com/estevaofay/argocd-poc.git
     targetRevision: {{ $.Values.targetRevision }}
-    path: charts/{{ $microservice.name }}
+    path: argocd-charts/charts/{{ $microservice.name }}
     # helm:
     #   parameters:
     #     - name: "instanceName"

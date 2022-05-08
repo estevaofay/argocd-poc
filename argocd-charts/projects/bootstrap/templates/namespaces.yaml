@@ -8,9 +8,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/estevaofay/argocd-poc/argocd-charts
+    repoURL: https://github.com/estevaofay/argocd-poc.git
     targetRevision: {{ .Values.targetRevision }}
-    path: projects/namespaces
+    path: argocd-charts/projects/namespaces
   destination:
     server: https://kubernetes.default.svc
     namespace: default
