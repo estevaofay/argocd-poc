@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: docker.io/kennethreitz/httpbin
-  pullPolicy: IfNotPresent
+  pullPolicy: imagePullPolicy
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
