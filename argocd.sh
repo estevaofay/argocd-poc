@@ -28,7 +28,6 @@ kubectl port-forward service/argocd-server -n argocd 8080:443
 https://localhost:8080/argocd
 
 # Get password
-
 ARGOCD_PASSWORD=$(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d)
 
 ############
@@ -58,4 +57,8 @@ cd ..
 # Port-forward
 kubectl port-forward service/argocd-server -n argocd 8080:443
 
+# Get Password
 ARGOCD_PASSWORD=$(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d)
+
+# Create NGINX Ingress Controller
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/aws/1.22/deploy.yaml
