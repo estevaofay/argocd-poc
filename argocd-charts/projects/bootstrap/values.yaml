@@ -2,7 +2,8 @@ targetRevision: dev # overriden by kustomize
 
 applications:
   - microservices:
-      - name: httpbin 
+      - name: httpbin
+      - name: httpbin2
       # - name: cert-manager
       #   namespace: cert-manager
       #   precedence: 1
