@@ -6,6 +6,8 @@ applications:
       # - name: istio-base
       - name: sample-broker
         namespace: default
+      - name: vitor-service
+        namespace: default
       #   namespace: istio-system
       # - name: istiod
       #   namespace: istio-system
