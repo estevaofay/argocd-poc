@@ -5,10 +5,10 @@
 replicaCount: 10
 
 image:
-  repository: nginx
+  repository: docker.io/kennethreitz/httpbin #getmentum.com/av-broker
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
