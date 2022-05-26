@@ -5,4 +5,5 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
+  - cert-manager.yaml
   - default.yaml
