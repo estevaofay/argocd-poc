@@ -10,9 +10,3 @@ applications:
         namespace: external-dns
       - name: argocd-ingress
         namespace: argocd
-      #   precedence: 1
-      # - name: ingress
-      # - name: httpbin
-      # - name: brewery-bees
-      # - name: argocd
-      #   namespace: argocd
