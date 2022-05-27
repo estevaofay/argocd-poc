@@ -8,6 +8,8 @@ applications:
         namespace: cert-manager
       - name: external-dns
         namespace: external-dns
+      - name: argocd-ingress
+        namespace: argocd
       #   precedence: 1
       # - name: ingress
       # - name: httpbin
