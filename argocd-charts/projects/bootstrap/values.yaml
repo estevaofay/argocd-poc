@@ -2,6 +2,8 @@ targetRevision: dev # overriden by kustomize
 
 applications:
   - microservices:
+      - name: nginx-ingress
+        namespace: nginx-ingress
       # - name: httpbin2
       # - name: istio-base
       # - name: sample-broker
