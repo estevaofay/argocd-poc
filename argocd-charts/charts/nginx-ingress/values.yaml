@@ -452,7 +452,7 @@ controller:
     appProtocol: true
 
     annotations:
-      external-dns.alpha.kubernetes.io/hostname: argocd.playground.getmentum.com
+      external-dns.alpha.kubernetes.io/hostname: argocd.playground.getmentum.com, httpbin.playground.getmentum.com
     labels: {}
     # clusterIP: ""
 
