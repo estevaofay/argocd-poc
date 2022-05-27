@@ -10,3 +10,5 @@ applications:
         namespace: external-dns
       - name: argocd-ingress
         namespace: argocd
+      - name: httpbin
+        namespace: httpbin
