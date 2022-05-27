@@ -1,0 +1,7 @@
+aapiVersion: v1
+kind: Namespace
+metadata:
+  name: external-dns
+spec:
+  finalizers:
+    - kubernetes

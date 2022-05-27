@@ -7,4 +7,5 @@ generatorOptions:
 resources:
   - cert-manager.yaml
   - default.yaml
+  - external-dns.yaml
   - nginx-ingress.yaml
