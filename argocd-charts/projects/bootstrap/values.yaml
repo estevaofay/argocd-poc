@@ -6,6 +6,8 @@ applications:
         namespace: nginx-ingress
       - name: cert-manager
         namespace: cert-manager
+      - name: external-dns
+        namespace: external-dns
       #   precedence: 1
       # - name: ingress
       # - name: httpbin
