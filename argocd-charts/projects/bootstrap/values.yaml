@@ -12,3 +12,5 @@ applications:
         namespace: argocd
       - name: httpbin
         namespace: httpbin
+      - name: external-secrets
+        namespace: external-secrets
