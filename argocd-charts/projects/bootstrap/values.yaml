@@ -14,3 +14,5 @@ applications:
         namespace: httpbin
       - name: external-secrets
         namespace: external-secrets
+      - name: external-secrets-configuration
+        namespace: external-secrets
