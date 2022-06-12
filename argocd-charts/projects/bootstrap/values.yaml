@@ -16,3 +16,5 @@ applications:
         namespace: external-secrets
       - name: external-secrets-configuration
         namespace: external-secrets
+      - name: fast-api-poc
+        namespace: fast-api-poc
