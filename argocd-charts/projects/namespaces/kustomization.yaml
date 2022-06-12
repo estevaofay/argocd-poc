@@ -8,5 +8,6 @@ resources:
   - cert-manager.yaml
   - default.yaml
   - external-dns.yaml
+  - external-secrets.yaml
   - httpbin.yaml
   - nginx-ingress.yaml
