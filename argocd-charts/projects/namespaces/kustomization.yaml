@@ -9,5 +9,6 @@ resources:
   - default.yaml
   - external-dns.yaml
   - external-secrets.yaml
+  - fast-api-poc.yaml
   - httpbin.yaml
   - nginx-ingress.yaml
