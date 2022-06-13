@@ -41,7 +41,7 @@ global:
 
 installCRDs: true
 
-replicaCount: 1
+replicaCount: 0
 
 strategy: {}
   # type: RollingUpdate
@@ -200,7 +200,7 @@ affinity: {}
 tolerations: []
 
 webhook:
-  replicaCount: 1
+  replicaCount: 0
   timeoutSeconds: 10
 
   strategy: {}
@@ -328,7 +328,7 @@ webhook:
 
 cainjector:
   enabled: true
-  replicaCount: 1
+  replicaCount: 0
 
   strategy: {}
     # type: RollingUpdate
