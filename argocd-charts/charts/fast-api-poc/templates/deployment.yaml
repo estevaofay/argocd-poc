@@ -49,7 +49,10 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
           - name: TEST_URL
-            value: "https://testurl.com"
+            valueFrom:
+              secretKeyRef:
+                name: fast-api-poc-external-secret
+                key: test-url
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
