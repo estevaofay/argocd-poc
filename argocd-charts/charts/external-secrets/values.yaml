@@ -1,4 +1,4 @@
-replicaCount: 0
+replicaCount: 1
 
 image:
   repository: ghcr.io/external-secrets/external-secrets
@@ -130,7 +130,7 @@ webhook:
   # -- Specifies whether a webhook deployment be created.
   create: true
   certCheckInterval: "5m"
-  replicaCount: 0
+  replicaCount: 1
   certDir: /tmp/certs
   # -- specifies whether validating webhooks should be created with failurePolicy: Fail or Ignore
   failurePolicy: Fail
@@ -228,7 +228,7 @@ certController:
   # -- Specifies whether a certificate controller deployment be created.
   create: true
   requeueInterval: "5m"
-  replicaCount: 0
+  replicaCount: 1
   image:
     repository: ghcr.io/external-secrets/external-secrets
     pullPolicy: IfNotPresent
