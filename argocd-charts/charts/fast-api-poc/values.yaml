@@ -6,7 +6,7 @@ image:
   repository: docker.io/estevaofay/fast-api-poc
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "252529787229"
+  tag: "252537566131"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
