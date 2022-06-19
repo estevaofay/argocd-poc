@@ -2,6 +2,8 @@ targetRevision: dev # overriden by kustomize
 
 applications:
   - microservices:
+      - name: aws-cloudwatch-metrics
+        namespace: cloud-watch-metrics
       - name: nginx-ingress
         namespace: nginx-ingress
       - name: cert-manager
