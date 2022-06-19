@@ -6,6 +6,7 @@ generatorOptions:
 
 resources:
   - cert-manager.yaml
+  - cloud-watch-metrics.yaml
   - default.yaml
   - external-dns.yaml
   - external-secrets.yaml
