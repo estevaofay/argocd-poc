@@ -4,9 +4,10 @@ metadata:
   name: {{ .Values.cronjob.name }}
 spec:
   schedule: "{{ .Values.cronjob.schedule }}"
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 5
   jobTemplate:
     spec:
-      ttlSecondsAfterFinished: 30
       template:
         spec:
           containers:
