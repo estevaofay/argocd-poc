@@ -8,6 +8,7 @@ spec:
     spec:
       template:
         spec:
+          ttlSecondsAfterFinished: 30
           containers:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
