@@ -6,9 +6,9 @@ spec:
   schedule: "{{ .Values.cronjob.schedule }}"
   jobTemplate:
     spec:
+      ttlSecondsAfterFinished: 30
       template:
         spec:
-          ttlSecondsAfterFinished: 30
           containers:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
