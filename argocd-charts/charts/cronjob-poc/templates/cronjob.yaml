@@ -4,8 +4,8 @@ metadata:
   name: {{ .Values.cronjob.name }}
 spec:
   schedule: "{{ .Values.cronjob.schedule }}"
-  successfulJobsHistoryLimit: 1
-  failedJobsHistoryLimit: 5
+  successfulJobsHistoryLimit: "{{ .Values.cronjob.successfulJobsHistoryLimit }}"
+  failedJobsHistoryLimit: "{{ .Values.cronjob.failedJobsHistoryLimit }}"
   jobTemplate:
     spec:
       template:
@@ -13,7 +13,7 @@ spec:
           containers:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-            # env:
-            # - name: SUPER_SECRET_ENV_VAR
-            #   value: "We can do anything our minds can dream"
+            env:
+            - name: SUPER_SECRET_ENV_VAR
+              value: "We can do anything our minds can dream"
           restartPolicy: Never
