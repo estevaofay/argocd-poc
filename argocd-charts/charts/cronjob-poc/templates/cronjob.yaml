@@ -11,4 +11,7 @@ spec:
           containers:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            env:
+            - name: SUPER_SECRET_ENV_VAR
+              value: "We can do anything our minds can dream"
           restartPolicy: Never
