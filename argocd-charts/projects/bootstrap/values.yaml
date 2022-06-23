@@ -8,6 +8,8 @@ applications:
         namespace: nginx-ingress
       - name: cert-manager
         namespace: cert-manager
+      - name: cronjob-poc
+        namespace: cron-job
       - name: external-dns
         namespace: external-dns
       - name: argocd-ingress
