@@ -11,4 +11,4 @@ spec:
           containers:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          restartPolicy: OnFailure
+          restartPolicy: Never
