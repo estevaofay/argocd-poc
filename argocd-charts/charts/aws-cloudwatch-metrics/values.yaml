@@ -16,6 +16,8 @@ resources:
 serviceAccount:
   create: true
   name:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::646203890422:role/eksctl-exciting-mushroom-1652034707-addon-ia-Role1-1ELD469GF1RL5
 
 hostNetwork: false
 
